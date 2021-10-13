@@ -11,18 +11,11 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-Zombie *zombieHorde(int N, std::string name);
 
 int main(void)
 {
-    int i;
-
-    i = 0;
     Zombie *zo;
     zo = zombieHorde(100, "Hus");
-    while(i < 100) {
-        zo[i++].announce();
-    }
     delete [] zo;
     return (0);
 }

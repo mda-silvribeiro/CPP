@@ -18,7 +18,7 @@ CPP				= clang++
 
 FLAGS			= -Wall -Wextra -Werror -std=c++98
 
-SRCS			= Zombie.cpp main.cpp ZombieHorde.cpp
+SRCS			= ${wildcard *.cpp}
 
 OBJS			= ${SRCS:.cpp=.o}
 
