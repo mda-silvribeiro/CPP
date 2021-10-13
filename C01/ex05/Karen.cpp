@@ -10,11 +10,6 @@ Karen::~Karen( void )
     return ;
 }
 
-void complain( std::string level )
-{
-    
-}
-
 void Karen::debug( void )
 {
     std::cout << "I love to get extra bacon for my \
@@ -40,4 +35,9 @@ void Karen::error(void )
 {
     std::cout << "This is unacceptable, I want to speak to the\
      manager now." << std::endl;
+}
+
+void Karen::complain( std::string level )
+{
+    void (Karen :: *ptr) (void) = &Karen :: level;
 }
