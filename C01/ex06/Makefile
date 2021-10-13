@@ -1,6 +1,6 @@
 MAKEFLAGS	+= --quiet
 
-NAME		= karen
+NAME		=  karenFilter
 
 SRCS		= ${wildcard *.cpp}
 

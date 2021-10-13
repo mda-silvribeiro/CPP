@@ -16,7 +16,7 @@ NAME 			= uncecessaryviolence
 
 CPP				= clang++
 
-FLAGS			= -g -fsanitize=address -Wall -Wextra -Werror -I.
+FLAGS			= -Wall -Wextra -Werror -std=c++98
 
 SRCS			= ${wildcard *.cpp}
 

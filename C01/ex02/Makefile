@@ -16,7 +16,7 @@ NAME		= memory
 
 RM			= rm -rf
 
-GPP			= clang++ -g -fsanitize=address -Wall -Wextra -Werror -I.
+GPP			= clang++ -Wall -Wextra -Werror -std=c++98
 
 SRCS		= main.cpp
 

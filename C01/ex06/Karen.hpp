@@ -10,6 +10,7 @@ class Karen
         ~Karen( void );
         Karen( void );
         void complain( std::string level );
+        void karenFilter(int i);
     
     private:
         void info( void );
