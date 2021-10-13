@@ -84,10 +84,6 @@ void Karen::complain( std::string level )
     int i;
     
     i = -1;
-    void (Karen :: *ptr1_f[])(void) = { 
-        &Karen :: debug,  &Karen :: info,
-        &Karen :: warning, &Karen :: error
-    };
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     while(levels[++i].compare(level) != 0 && i < 4)
         continue ;
