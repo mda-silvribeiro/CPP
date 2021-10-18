@@ -23,12 +23,12 @@ class Point {
 	public:
 
 		Point(void);
-		Point(const float x, const float y);
+		Point(const float a, const float b);
 		Point(const Point& other);
 		~Point(void);
 
-		Point& operator=(const Point& other);
-		float sign(Point p2, Point p3);
+		Point& operator=(const Point& aux);
+		float sign(Point b, Point c);
 
 	private:
 

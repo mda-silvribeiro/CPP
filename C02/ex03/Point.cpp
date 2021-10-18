@@ -12,11 +12,17 @@
 
 #include "Point.hpp"
 
-Point::Point(void) {}
+Point::Point(void) : _x(0), _y(0) {
 
-Point::Point(const float x, const float y) : _x(x), _y(y) {}
+}
 
-Point::Point(const Point& other) : _x(other._x), _y(other._y) {}
+Point::Point(const float a, const float b) : _x(a), _y(b) {
+
+}
+
+Point::Point(const Point& aux) : _x(aux._x), _y(aux._y) {
+
+}
 
 Point::~Point(void) {}
 
@@ -27,10 +33,10 @@ Point& Point::operator=(const Point& other) {
 	return *this;
 }
 
-float Point::sign(Point p2, Point p3) {
+float Point::sign(Point b, Point c) {
+	
 	Fixed res;
 
-	res = (this->_x - p3._x) * (p2._y - p3._y) - (p2._x - p3._x) * (this->_y - p3._y);
-
+	res = (this->_x - c._x) * (b._y - c._y) - (b._x - c._x) * (this->_y - c._y);
     return res.toFloat();
 }

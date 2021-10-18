@@ -16,9 +16,9 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
 {
     Point cpy = point;
     bool b1, b2, b3;
-    b1 = cpy.sign(a, b) < 0.0f;
-    b2 = cpy.sign(b, c) < 0.0f;
-    b3 = cpy.sign(c, a) < 0.0f;
+    b1 = cpy.sign(a, b) < 0;
+    b2 = cpy.sign(b, c) < 0;
+    b3 = cpy.sign(c, a) < 0;
 
     return((b1 == b2) && (b2 == b3));
 }
