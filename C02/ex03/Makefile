@@ -1,6 +1,6 @@
 MAKEFLAGS	+= --quiet
 
-NAME		=  fixed
+NAME		=  bsp
 
 SRCS		= ${wildcard *.cpp}
 
