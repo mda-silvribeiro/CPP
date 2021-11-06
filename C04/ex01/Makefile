@@ -20,10 +20,10 @@ SUCCESS		= \033[1;32m\033[1;44m
 all:			$(NAME)
 
 $(NAME):		$(OBJS)
-				$(CPP) $(CFLAGS) -o $@ $(OBJS) -I.
 				@mkdir $(OBJS_DIR) && mv $(OBJS) $(OBJS_DIR)
-				@echo "${SUCCESS}compiled file\n"	
-
+				$(CPP) $(CFLAGS) -o $@ $(OBJS_DIR)/* -I.
+				@echo "${SUCCESS}compiled file\n"
+				
 .cpp.o:
 				@ $(CPP) $(CFLAGS) -I -g -c $< -o $@	
 

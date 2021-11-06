@@ -3,7 +3,7 @@
 
 #include "AMateria.hpp"
 
-class IMateriaSource : public AMateria
+class IMateriaSource 
 {
     public:
         virtual ~IMateriaSource() {}

@@ -16,24 +16,28 @@ Character::Character(const Character & src ) {
     *this = src;
 };
 
+Character::~Character( void ) {
+    std::cout << "Character Destructor called" << std::endl;
+
+}
 std::string const & Character::getName() const {
     return (_n);
 }
 
 void Character::equip(AMateria* m) {
     if (_equiped_idx > 3)
-        std::cout << "You are fully equipped." << std::endl;
+        std::cout << "\033[1;31m\033[1;43mYou are fully equipped.\033[0m" << std::endl;
     else
     {
         _inventory[_equiped_idx] = m;
-        std::cout << "The equipment " << m->getType() << " been added to the inventory." << std::endl;
+        std::cout << "\033[1;32m\033[1;47mThe equipment " << m->getType() << " been added to the inventory.\033[0m" << std::endl;
         _equiped_idx++;
     }
 }
 
 void Character::unequip(int idx) {
     if (_equiped_idx == 0)
-        std::cout << "You don't have any equipment." << std::endl;
+        std::cout << "\033[1;33m\033[1;41mYou don't have any equipment.\033[0m" << std::endl;
     else if (!(_inventory[idx]))
         std::cout << "You don't have any equipment at pos " <<  idx << std::endl;
     else if (_inventory[idx]) 
@@ -42,7 +46,7 @@ void Character::unequip(int idx) {
         _equiped_idx--;
         _equiped_idx = idx;
         if (_inventory[idx] == NULL)
-            std::cout << "The equipment at position "<< idx << " was successfully unequipped." << std::endl;
+            std::cout << "\033[1;32mmThe equipment at position "<< idx << " was successfully unequipped.\033[0m" << std::endl;
     }
 }
 
